@@ -1,0 +1,16 @@
+<b2x:translation xmlns:b2x="http://schemas.ilog.com/JRules/1.3/Translation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.ilog.com/JRules/1.3/Translation ilog/rules/schemas/1_3/b2x.xsd">
+    <id>5e6dfc85-eb48-4a19-ab0f-9bb6182cb665</id>
+    <lang>ARL</lang>
+    <class>
+        <businessName>Virtual</businessName>
+        <executionName>java.lang.Object</executionName>
+        <method>
+            <name>regulationDoesnotApplyBecause</name>
+            <parameter type="java.lang.String"/>
+            <body language="arl"><![CDATA[
+            regulationApplies = false;
+justification = justification2;
+            ]]></body>
+        </method>
+    </class>
+</b2x:translation>

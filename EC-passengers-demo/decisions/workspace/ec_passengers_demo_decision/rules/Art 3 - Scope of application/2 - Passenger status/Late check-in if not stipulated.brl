@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Late check-in if not stipulated</name>
+  <uuid>1b1c4c28-b075-4466-8ef0-55e88602d952</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the status of 'the passenger' is Has a confirmed reservation
+    and 'the event type' is not Cancellation
+    and the stipulated check-in time of 'the flight' is null
+    and the presentation for check in time of 'the passenger' is after 45 minutes before the published departure time of 'the flight'
+then
+    this regulation does not apply because "Article 3 - Paragraph 2 - The passenger presented themselves for check-in less than 45 minutes before the published departure time" ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

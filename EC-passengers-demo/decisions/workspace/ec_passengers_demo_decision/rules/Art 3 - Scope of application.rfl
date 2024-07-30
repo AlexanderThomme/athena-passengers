@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Art 3 - Scope of application</name>
+  <uuid>2772cd5f-d36c-4242-a3df-f29c264ab528</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_2"/>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="Init" Ordering="Default">
+        <RuleList>
+          <Package Name="Art 3 - Scope of application.Init"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="1 - Airport location" Ordering="Default">
+        <RuleList>
+          <Package Name="Art 3 - Scope of application.1 - Airport location"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="2 - Passenger status" Ordering="Default">
+        <RuleList>
+          <Package Name="Art 3 - Scope of application.2 - Passenger status"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="3 - Fare" Ordering="Default">
+        <RuleList>
+          <Package Name="Art 3 - Scope of application.3 - Fare"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_3"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_2" Task="task_2"/>
+      <TaskNode Identifier="node_3" Task="task_3"/>
+      <TaskNode Identifier="node_0" Task="Init"/>
+      <TaskNode Identifier="node_4" Task="1 - Airport location"/>
+      <TaskNode Identifier="node_5" Task="2 - Passenger status"/>
+      <TaskNode Identifier="node_6" Task="3 - Fare"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_2" Target="node_0"/>
+      <Transition Identifier="transition_1" Source="node_0" Target="node_4"/>
+      <Transition Identifier="transition_3" Source="node_5" Target="node_6"/>
+      <Transition Identifier="transition_4" Source="node_4" Target="node_5"/>
+      <Transition Identifier="transition_5" Source="node_4" Target="node_3">
+        <Conditions Language="bal"><![CDATA['this regulation applies' is false]]></Conditions>
+      </Transition>
+      <Transition Identifier="transition_6" Source="node_6" Target="node_3"/>
+      <Transition Identifier="transition_7" Source="node_5" Target="node_3">
+        <Conditions Language="bal"><![CDATA['this regulation applies' is false]]></Conditions>
+      </Transition>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_2#height">21.0</Data>
+      <Data Name="node_4#width">102.0</Data>
+      <Data Name="node_3#height">18.0</Data>
+      <Data Name="node_0#height">40.0</Data>
+      <Data Name="node_4#height">68.103516</Data>
+      <Data Name="transition_3#label">Regulation applies</Data>
+      <Data Name="node_2#name">node_0</Data>
+      <Data Name="node_5#height">68.103516</Data>
+      <Data Name="node_6#height">40.0</Data>
+      <Data Name="node_2#width">21.0</Data>
+      <Data Name="node_0#width">102.0</Data>
+      <Data Name="node_3#y">506.20703</Data>
+      <Data Name="node_4#x">51.0</Data>
+      <Data Name="node_4#y">195.05176</Data>
+      <Data Name="node_5#x">89.0</Data>
+      <Data Name="node_5#y">313.15527</Data>
+      <Data Name="node_6#x">120.5</Data>
+      <Data Name="node_5#width">102.0</Data>
+      <Data Name="node_6#y">417.20703</Data>
+      <Data Name="node_0#x">51.0</Data>
+      <Data Name="node_0#y">91.0</Data>
+      <Data Name="node_2#x">51.0</Data>
+      <Data Name="node_2#y">10.5</Data>
+      <Data Name="node_3#x">61.5</Data>
+      <Data Name="transition_4#label">Regulation applies</Data>
+      <Data Name="transition_7#label">Regulation does not apply</Data>
+      <Data Name="node_3#width">18.0</Data>
+      <Data Name="transition_5#label">Regulation does not apply</Data>
+      <Data Name="node_6#width">102.0</Data>
+      <Data Name="node_3#name">node_2</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow>
+</rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

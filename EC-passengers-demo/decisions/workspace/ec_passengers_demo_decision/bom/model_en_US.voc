@@ -1,0 +1,50 @@
+# Vocabulary Properties
+uuid = 3e124948-c936-4f24-b935-a4def2a34d13
+
+# ec_passengers_demo_xom.EventType
+ec_passengers_demo_xom.EventType#concept.label = event type
+ec_passengers_demo_xom.EventType.Cancellation#instance.label = Cancellation
+ec_passengers_demo_xom.EventType.Delay#instance.label = Delay
+ec_passengers_demo_xom.EventType.DeniedBoarding#instance.label = Denied boarding
+
+# ec_passengers_demo_xom.Fare
+ec_passengers_demo_xom.Fare#concept.label = fare
+ec_passengers_demo_xom.Fare.FreeOfCharge#instance.label = Free of charge
+ec_passengers_demo_xom.Fare.Other#instance.label = Other
+ec_passengers_demo_xom.Fare.ReducedFareNotAvailableToThePublic#instance.label = Reduced fare not available to the public
+
+# ec_passengers_demo_xom.Flight
+ec_passengers_demo_xom.Flight#concept.label = flight
+ec_passengers_demo_xom.Flight.departsFromMemberState#phrase.action = make it {departs from member state} that {this} is departs from member state
+ec_passengers_demo_xom.Flight.departsFromMemberState#phrase.navigation = {this} departs from an airport located in the territory of a Member State
+ec_passengers_demo_xom.Flight.landsInMemberState#phrase.action = make it {lands in member state} that {this} is lands in member state
+ec_passengers_demo_xom.Flight.landsInMemberState#phrase.navigation = {this} lands in an airport located in the territory of a Member State
+ec_passengers_demo_xom.Flight.operatingAirCarrierIsCommunityCarrier#phrase.action = make it {operating air carrier is community carrier} that {this} is operating air carrier is community carrier
+ec_passengers_demo_xom.Flight.operatingAirCarrierIsCommunityCarrier#phrase.navigation = the operating air carrier of {this} is a Community carrier
+ec_passengers_demo_xom.Flight.publishedDepartureTime#phrase.action = set the published departure time of {this} to {published departure time}
+ec_passengers_demo_xom.Flight.publishedDepartureTime#phrase.navigation = {published departure time} of {this}
+ec_passengers_demo_xom.Flight.stipulatedCheckInTime#phrase.action = set the stipulated check-in time of {this} to {stipulated check-in time}
+ec_passengers_demo_xom.Flight.stipulatedCheckInTime#phrase.navigation = {stipulated check-in time} of {this}
+
+# ec_passengers_demo_xom.Passenger
+ec_passengers_demo_xom.Passenger#concept.label = passenger
+ec_passengers_demo_xom.Passenger.presentationForCheckInTime#phrase.action = set the presentation for check in time of {this} to {presentation for check in time}
+ec_passengers_demo_xom.Passenger.presentationForCheckInTime#phrase.navigation = {presentation for check in time} of {this}
+ec_passengers_demo_xom.Passenger.status#phrase.action = set the status of {this} to {status}
+ec_passengers_demo_xom.Passenger.status#phrase.navigation = {status} of {this}
+
+# ec_passengers_demo_xom.PassengerStatus
+ec_passengers_demo_xom.PassengerStatus#concept.label = passenger status
+ec_passengers_demo_xom.PassengerStatus.HasAConfirmedReservation#instance.label = Has a confirmed reservation
+ec_passengers_demo_xom.PassengerStatus.HasBeenTransferred#instance.label = Has been transferred
+ec_passengers_demo_xom.PassengerStatus.Other#instance.label = Other
+
+# ec_passengers_demo_xom.Ticket
+ec_passengers_demo_xom.Ticket#concept.label = ticket
+ec_passengers_demo_xom.Ticket.fare#phrase.action = set the fare of {this} to {fare}
+ec_passengers_demo_xom.Ticket.fare#phrase.navigation = {fare} of {this}
+
+# ec_passengers_demo_xom.Utils
+ec_passengers_demo_xom.Utils#concept.label = utils
+ec_passengers_demo_xom.Utils.getDateMinutesAfter(java.util.Date,int)#phrase.navigation = {1} minutes after {0} 
+ec_passengers_demo_xom.Utils.getDateMinutesBefore(java.util.Date,int)#phrase.navigation = {1} minutes before {0} 

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>3 - Fare</name>
+  <uuid>8eea7bf6-a8c8-441b-8621-15666d061153</uuid>
+</ilog.rules.studio.model.base:RulePackage>

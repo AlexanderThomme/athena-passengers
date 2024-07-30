@@ -1,0 +1,70 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/ec_passengers_demo_decision//ec_passengers_demo_xom"
+property uuid "9e79b9e3-9d39-4834-a1d8-d86f386b100b"
+package ec_passengers_demo_xom;
+
+
+public final class EventType
+        extends java.lang.Enum
+{
+    domain {static DeniedBoarding, static Cancellation, static Delay}
+    public static final readonly ec_passengers_demo_xom.EventType Cancellation;
+    public static final readonly ec_passengers_demo_xom.EventType Delay;
+    public static final readonly ec_passengers_demo_xom.EventType DeniedBoarding;
+    public static ec_passengers_demo_xom.EventType valueOf(string arg);
+    public static ec_passengers_demo_xom.EventType[] values();
+}
+
+public final class Fare
+        extends java.lang.Enum
+{
+    domain {static FreeOfCharge, static ReducedFareNotAvailableToThePublic, static Other}
+    public static final readonly ec_passengers_demo_xom.Fare FreeOfCharge;
+    public static final readonly ec_passengers_demo_xom.Fare Other;
+    public static final readonly ec_passengers_demo_xom.Fare ReducedFareNotAvailableToThePublic;
+    public static ec_passengers_demo_xom.Fare valueOf(string arg);
+    public static ec_passengers_demo_xom.Fare[] values();
+}
+
+public class Flight
+{
+    public boolean departsFromMemberState;
+    public boolean landsInMemberState;
+    public boolean operatingAirCarrierIsCommunityCarrier;
+    public java.util.Date publishedDepartureTime;
+    public java.util.Date stipulatedCheckInTime;
+    public Flight();
+}
+
+public class Passenger
+{
+    public java.util.Date presentationForCheckInTime;
+    public ec_passengers_demo_xom.PassengerStatus status;
+    public Passenger();
+}
+
+public final class PassengerStatus
+        extends java.lang.Enum
+{
+    domain {static HasAConfirmedReservation, static HasBeenTransferred, static Other}
+    public static final readonly ec_passengers_demo_xom.PassengerStatus HasAConfirmedReservation;
+    public static final readonly ec_passengers_demo_xom.PassengerStatus HasBeenTransferred;
+    public static final readonly ec_passengers_demo_xom.PassengerStatus Other;
+    public static ec_passengers_demo_xom.PassengerStatus valueOf(string arg);
+    public static ec_passengers_demo_xom.PassengerStatus[] values();
+}
+
+public class Ticket
+{
+    public ec_passengers_demo_xom.Fare fare;
+    public Ticket();
+}
+
+public class Utils
+{
+    public Utils();
+    public static java.util.Date getDateMinutesAfter(java.util.Date arg1, int arg2);
+    public static java.util.Date getDateMinutesBefore(java.util.Date arg1, int arg2);
+}
+

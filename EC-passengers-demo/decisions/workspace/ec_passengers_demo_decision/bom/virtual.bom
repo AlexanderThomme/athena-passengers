@@ -1,0 +1,8 @@
+
+property uuid "69cff997-97f7-4016-88a6-9e6ecb2e58bd"
+
+public class Virtual
+{
+    public static void regulationDoesnotApplyBecause(string justification2);
+}
+

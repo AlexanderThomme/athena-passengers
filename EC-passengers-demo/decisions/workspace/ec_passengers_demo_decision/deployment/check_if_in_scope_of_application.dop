@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="check_if_in_scope_of_application" usingRuleflow="true" ruleflowName="Art 3 - Scope of application" targetRuleProjectName="ec_passengers_demo_decision">
+  <name>check_if_in_scope_of_application</name>
+  <uuid>03c3c40f-d6c0-427b-aeec-71f9ee9e853a</uuid>
+  <referencedVariables variableName="flight" variableSetName="var">
+    <variableSet href="../rules/var.var#ff6af74f-515f-42bb-b5e6-5f13cb651b81"/>
+  </referencedVariables>
+  <referencedVariables variableName="regulationApplies" variableSetName="var" direction="OUT">
+    <variableSet href="../rules/var.var#ff6af74f-515f-42bb-b5e6-5f13cb651b81"/>
+  </referencedVariables>
+  <referencedVariables variableName="justification" variableSetName="var" direction="OUT">
+    <variableSet href="../rules/var.var#ff6af74f-515f-42bb-b5e6-5f13cb651b81"/>
+  </referencedVariables>
+  <referencedVariables variableName="passenger" variableSetName="var">
+    <variableSet href="../rules/var.var#ff6af74f-515f-42bb-b5e6-5f13cb651b81"/>
+  </referencedVariables>
+  <referencedVariables variableName="eventType" variableSetName="var">
+    <variableSet href="../rules/var.var#ff6af74f-515f-42bb-b5e6-5f13cb651b81"/>
+  </referencedVariables>
+  <referencedVariables variableName="ticket" variableSetName="var">
+    <variableSet href="../rules/var.var#ff6af74f-515f-42bb-b5e6-5f13cb651b81"/>
+  </referencedVariables>
+  <ruleflow href="../rules/Art%203%20-%20Scope%20of%20application.rfl#2772cd5f-d36c-4242-a3df-f29c264ab528"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="check_if_in_scope_of_application_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../ec_passengers_demo_decision#685508fe-da61-47aa-81b1-36f05d6376a9"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

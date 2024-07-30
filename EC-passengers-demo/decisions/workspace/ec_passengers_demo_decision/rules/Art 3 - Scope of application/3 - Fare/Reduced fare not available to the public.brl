@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Reduced fare not available to the public</name>
+  <uuid>728121de-896f-4a9a-83b4-638b80ff245b</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the fare of 'the ticket' is Reduced fare not available to the public 
+then
+    this regulation does not apply because "Article 3 - Paragraph 3 - The passenger travelled at a reduced fare not available to the public" ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

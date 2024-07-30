@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>var</name>
+  <uuid>ff6af74f-515f-42bb-b5e6-5f13cb651b81</uuid>
+  <variables name="flight" type="ec_passengers_demo_xom.Flight" initialValue="" verbalization="the flight"/>
+  <variables name="regulationApplies" type="boolean" initialValue="" verbalization="this regulation applies"/>
+  <variables name="justification" type="java.lang.String" initialValue="&quot;N/A&quot;" verbalization="the justification"/>
+  <variables name="passenger" type="ec_passengers_demo_xom.Passenger" initialValue="" verbalization="the passenger"/>
+  <variables name="eventType" type="ec_passengers_demo_xom.EventType" initialValue="" verbalization="the event type"/>
+  <variables name="ticket" type="ec_passengers_demo_xom.Ticket" initialValue="" verbalization="the ticket"/>
+</ilog.rules.studio.model.base:VariableSet>

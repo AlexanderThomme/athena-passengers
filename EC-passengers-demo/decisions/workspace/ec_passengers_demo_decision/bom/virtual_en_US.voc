@@ -1,0 +1,3 @@
+# Vocabulary Properties
+uuid = 6f4ef6f8-56a1-4291-8dfd-d77faf139ef0
+Virtual.regulationDoesnotApplyBecause(java.lang.String)#phrase.action = this regulation does not apply because {0}

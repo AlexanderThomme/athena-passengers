@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Art 3 - Scope of application</name>
+  <uuid>3d8832a8-478c-4dc7-bbac-018ffc102c34</uuid>
+</ilog.rules.studio.model.base:RulePackage>

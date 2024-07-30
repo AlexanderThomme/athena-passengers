@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>2 - Passenger status</name>
+  <uuid>00817683-2260-41f8-9ec5-88a08e3e93e2</uuid>
+</ilog.rules.studio.model.base:RulePackage>
