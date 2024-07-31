@@ -1,0 +1,127 @@
+openapi: 3.0.1
+info:
+  title: check_if_in_scope_of_application API
+  description: API to invoke the execution of the decision service operation check_if_in_scope_of_application.
+  version: 1.0.0
+servers:
+- url: http://localhost:9060/DecisionService/rest
+paths:
+  /ec_passengers_deployment/check_if_in_scope_of_application:
+    post:
+      summary: Invokes the execution of the decision service operation check_if_in_scope_of_application.
+      description: Executes the decision service operation check_if_in_scope_of_application
+        with the path /ec_passengers_deployment/check_if_in_scope_of_application.
+      operationId: callcheck_if_in_scope_of_applicationDecisionServiceOperation
+      requestBody:
+        description: Request for the execution of the decision service operation.
+          Contains notably the input parameters that are used for the execution.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Request'
+        required: true
+      responses:
+        "200":
+          description: Response for the execution of the decision service operation.
+            Contains notably the output parameters that are returned by the execution.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+        default:
+          description: Error occurring when invoking the execution of the decision
+            service operation.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas:
+    Request:
+      type: object
+      properties:
+        __DecisionID__:
+          type: string
+          description: "Unique identifier representing the execution of the decision\
+            \ service operation. If it is not specified, it will be computed automatically."
+        eventType:
+          type: string
+          enum:
+          - DeniedBoarding
+          - Cancellation
+          - Delay
+        flight:
+          $ref: '#/components/schemas/Flight'
+        passenger:
+          $ref: '#/components/schemas/Passenger'
+        ticket:
+          $ref: '#/components/schemas/Ticket'
+      description: Request for the execution of the decision service operation. Contains
+        notably the input parameters that are used for the execution.
+    Response:
+      type: object
+      properties:
+        __DecisionID__:
+          type: string
+          description: "Unique identifier representing the execution of the decision\
+            \ service operation. If it is not specified, it will be computed automatically."
+        justification:
+          type: string
+        regulationApplies:
+          type: boolean
+      description: Response for the execution of the decision service operation. Contains
+        notably the output parameters that are returned by the execution.
+    Flight:
+      type: object
+      properties:
+        departsFromMemberState:
+          type: boolean
+        landsInMemberState:
+          type: boolean
+        operatingAirCarrierIsCommunityCarrier:
+          type: boolean
+        stipulatedCheckInTime:
+          type: string
+          format: date-time
+        publishedDepartureTime:
+          type: string
+          format: date-time
+    Passenger:
+      type: object
+      properties:
+        status:
+          type: string
+          enum:
+          - HasAConfirmedReservation
+          - HasBeenTransferred
+          - Other
+        presentationForCheckInTime:
+          type: string
+          format: date-time
+    Ticket:
+      type: object
+      properties:
+        fare:
+          type: string
+          enum:
+          - FreeOfCharge
+          - ReducedFareNotAvailableToThePublic
+          - Other
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          description: HTTP error code.
+          format: int32
+        message:
+          type: string
+          description: Error message.
+        details:
+          type: string
+          description: Detailed error message.
+        errorCode:
+          type: string
+          description: Product error code.
+      description: Error occurring when invoking the execution of the decision service
+        operation.
